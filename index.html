@@ -5,27 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode">
   <header class="navbar">
     <div class="container">
-      <h1>My Design Portfolio</h1>
+      <h1>Design Portfolio</h1>
+      <button class="toggle-btn" id="themeToggle">🌙 Dark Mode</button>
     </div>
   </header>
 
   <main>
     <div class="container">
-      <h2>Welcome to My Design Portfolio</h2>
-      <p>Below are some of my selected works showcasing my design expertise.</p>
-      <div class="carousel" id="carousel">
-        <!-- Images will be dynamically inserted by JavaScript -->
+      <h2 class="intro-title">Welcome to My Design Portfolio</h2>
+      <p class="intro-text">Below are some of my selected works showcasing my design expertise.</p>
+      
+      <div class="image-slider">
+        <div class="slider-nav left">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slider-nav right">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="image-display">
+          <img src="assets/images/figma-screenshot1.png" alt="Figma Screenshot">
+          <p class="highlight-note">This is just a few snaps of my Figma screens, all these screens are completely made by me.</p>
+        </div>
       </div>
+      
+      <button class="portfolio-btn">Explore More</button>
     </div>
   </main>
 
   <footer class="footer">
-    
-    <p>Contact - Mukulprajapatiii02@gmail.com | +91 8851932742 </p>
+    <div class="contact-section">
+      <p>Contact Me</p>
+      <ul class="social-icons">
+        <li><a href="https://github.com/mukulprajapati" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://linkedin.com/in/mukulprajapati" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://twitter.com/mukulprajapati" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      <p>Email: <a href="mailto:mukulprajapatiii02@gmail.com">mukulprajapatiii02@gmail.com</a></p>
+      <p>Phone: <a href="tel:+918851932742">+91 8851932742</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

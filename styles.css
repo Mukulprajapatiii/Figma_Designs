@@ -1,55 +1,205 @@
 /* Global Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  h1, h2, h3, p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-  /* Footer Styles */
-  .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  
-  /* Carousel Styles */
-  .carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-  }
-  
-  .carousel img {
-    max-height: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Themes */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #181818;
+  color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.toggle-btn {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #45a049;
+}
+
+/* Intro Section */
+.intro-title {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+/* Image Slider */
+.image-slider {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.image-display img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Slider Navigation */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.slider-nav.left {
+  left: 10px;
+}
+
+.slider-nav.right {
+  right: 10px;
+}
+
+.slider-nav:hover {
+  color: #007BFF;
+}
+
+/* Highlight Note */
+.highlight-note {
+  background-color: #ffef96;
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Portfolio Button */
+.portfolio-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007BFF;
+  color: #fff;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.portfolio-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 1.5rem;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.contact-section a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons .fa-github {
+  color: #333;
+}
+
+.social-icons .fa-linkedin {
+  color: #0077B5;
+}
+
+.social-icons .fa-twitter {
+  color: #1DA1F2;
+}

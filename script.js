@@ -1,18 +1,35 @@
-// JavaScript to dynamically populate the carousel
-const images = [
-    "figma-screenshot1.png",
-    "figma-screenshot2.png",
-    "figma-screenshot3.png",
-    "figma-screenshot4.png",
-    "figma-screenshot5.png"
-  ];
-  
-  const carousel = document.getElementById("carousel");
-  
-  images.forEach(image => {
-    const imgElement = document.createElement("img");
-    imgElement.src = `assets/images/${image}`;
-    imgElement.alt = `Screenshot of ${image}`;
-    carousel.appendChild(imgElement);
-  });
-  
+// Theme toggle functionality
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+  body.classList.toggle("light-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    themeToggle.textContent = "☀️ Light Mode";
+  } else {
+    themeToggle.textContent = "🌙 Dark Mode";
+  }
+});
+
+// Image Slider Functionality
+const leftArrow = document.querySelector('.slider-nav.left');
+const rightArrow = document.querySelector('.slider-nav.right');
+const imageDisplay = document.querySelector('.image-display');
+const images = ['assets/images/figma-screenshot1.png', 'assets/images/figma-screenshot2.png']; // Add more images as needed
+let currentImageIndex = 0;
+
+function updateImage() {
+  imageDisplay.querySelector('img').src = images[currentImageIndex];
+}
+
+leftArrow.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  updateImage();
+});
+
+rightArrow.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  updateImage();
+});
