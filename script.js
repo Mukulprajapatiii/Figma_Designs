@@ -17,7 +17,7 @@ themeToggle.addEventListener("click", () => {
 const leftArrow = document.querySelector('.slider-nav.left');
 const rightArrow = document.querySelector('.slider-nav.right');
 const imageDisplay = document.querySelector('.image-display');
-const images = ['assets/images/figma-screenshot1.png', 'assets/images/figma-screenshot2.png']; // Add more images as needed
+const images = ['assets/images/figma-screenshot1.png', 'assets/images/figma-screenshot2.png','assets/images/figma-screenshot3.png','assets/images/figma-screenshot4.png','assets/images/figma-screenshot5.png','assets/images/figma-screenshot6.png']; // Add more images as needed
 let currentImageIndex = 0;
 
 function updateImage() {
